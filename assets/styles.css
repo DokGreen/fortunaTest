@@ -1,0 +1,89 @@
+/*----------------------GLOBAL-----------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.yell {
+    color: #FAB11D;
+}
+/*----------------------END OF GLOBAL-----------------------*/
+/*----------------------NAV-----------------------*/
+nav {
+    height: 7vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #16232b;
+}
+
+#list {
+    height: 100%;
+    width: 25vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    color: #fff;
+}
+
+.listItem {
+    display: inline-block;
+    font-size: 1vw;
+}
+
+/*----------------------END OF NAV-----------------------*/
+/*----------------------HEADER-----------------------*/
+header {
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+header h1 {
+    width: 80%;
+    font-size: 4vw;
+}
+/*----------------------END OF HEADER-----------------------*/
+/*----------------------OPTIONS-----------------------*/
+#options {
+    height: 53vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.op {
+    width: 18.5vw;
+    list-style: none;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    font-size: 3.8vw;
+    line-height: 95vh;
+    background-position: center;
+    background-size: cover;
+}
+
+.op:nth-child(1) {
+    line-height: 65vh;
+    background-image: url('./img-trees.png');
+}
+.op:nth-child(2) {
+    background-image: url('./img-bike.jpg');
+}
+.op:nth-child(3) {
+    background-image: url('./img-cafe.jpg');
+}
+.op:nth-child(4) {
+    background-image: url('./img-travel.jpg');
+}
+.op:nth-child(5) {
+    background-image: url('./img-local.jpg');
+}
+/*----------------------END OF OPTIONS-----------------------*/
