@@ -110,12 +110,12 @@ header h1 {
     height: 100vh;
     width: 95vw;
     margin: 0 auto;
-    padding: 3vh 1vw;
+    padding: 3vh 1vw 4vh 1vw;
     display: flex;
     justify-content: space-between;
     background-color: #EEF3F9;
 }
-
+/*----------------------LARGE ARTICLES-----------------------*/
 #largeArt {
     height: 100%;
     width: 58%;
@@ -164,7 +164,7 @@ header h1 {
     color: rgba(0,0,0,0.5);
 }
 /*----------------------END OF LARGE ARTICLES-----------------------*/
-
+/*----------------------SMALL ARTICLES-----------------------*/
 .smallArt {
     height: 100vh;
     width: 31%;
@@ -216,4 +216,37 @@ header h1 {
     color: rgba(0,0,0,0.5);
 }
 /*----------------------END OF SMALL ARTICLES-----------------------*/
+#aboutSect {
+    height: 55vh;
+    padding: 2vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#aboutHead {
+    font-weight: normal;
+}
+
+#about {
+    display: flex;
+    margin-top: 1vw;
+}
+
+#about h1 {
+    align-self: center;
+    flex-basis: 40%;
+    font-size: 4.5vw;
+    font-weight: bold;
+    color: #16232b;
+}
+
+#about p {
+    flex-basis: 55%;
+    color: rgba(0,0,0,0.5);
+}
+
+.line {
+    border-bottom: solid 1vw #FAAD11;
+}
 /*----------------------END OF ARTICLES-----------------------*/
