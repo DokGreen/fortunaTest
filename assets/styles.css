@@ -19,6 +19,10 @@ nav {
     background-color: #16232b;
 }
 
+nav img {
+    width: 20vw;
+}
+
 #list {
     height: 100%;
     width: 25vw;
@@ -86,6 +90,10 @@ header h1 {
     border-radius: 0.2vw;
     background-position: center;
     background-size: cover;
+}
+
+#rArrow {
+    width: 8vw;
 }
 
 .op:nth-child(1) {
@@ -253,16 +261,50 @@ header h1 {
 /*----------------------END OF ARTICLES-----------------------*/
 /*----------------------FOOTER-----------------------*/
 footer {
-    height: 30vh;
+    height: 35vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
     background-color: #16232B;
 }
-
-.foot1 img {
+/*----------------------FOOT 1-----------------------*/
+.foot1 {
+    height: 70%;
+    width: 30%;
+    margin-bottom: 5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgba(255,255,255,0.8);
 }
 
+#imgFix {
+    position: relative;
+    height: 22vh;
+    width: 20vw;
+    overflow: hidden;
+}
+
+#subImgFix {
+    height: 16vh;
+    width: 7vw;
+    margin: 0 auto;
+    background: url('./logo-white.svg') no-repeat left;
+    background-size: cover;
+}
+
+#subImgFix2 {
+    position: absolute;
+    left: 3vw;
+    top: 6vw;
+    height: 8vh;
+    width: 14.5vw;
+    background: url('./logo-white.svg') no-repeat right;
+    background-size: cover;
+}
+/*----------------------END OF FOOT 1-----------------------*/
+/*----------------------FOOT 2-----------------------*/
 .foot2 {
     height: 80%;
     width: 50%;
@@ -287,4 +329,53 @@ td {
     padding-bottom: 0.8vh;
     border-bottom: solid 0.3vh rgba(255,255,255,0.8);
 }
+/*----------------------END OF FOOT 2-----------------------*/
 /*----------------------END OF FOOTER-----------------------*/
+/*----------------------NEWS-----------------------*/
+.news {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-image: linear-gradient(#FDD425, #FAB013);
+}
+
+.news p {
+    font-size: 3vw;
+    font-weight: bold;
+    color: #16232b;
+}
+
+.signup {
+    height: 6vh;
+    width: 30%;
+    display: flex;
+    align-items: center;
+}
+
+#supBox {
+    height: 6vh;
+    width: 20vw;
+    padding-left: 1vw;
+    margin: 0;
+    border: none;
+    border-radius: 0.2vw 0 0 0.2vw;
+}
+
+#supBox::placeholder {
+    font-size: 1.2vw;
+    color: #16232b;
+}
+
+#supBtn {
+    height: 6vh;;
+    margin-left: -1vw;
+    padding: 0 2vw;
+    font-size: 1.2vw;
+    font-weight: bold;
+    border: none;
+    border-radius: 0.2vw;
+    color: #FAB013;
+    background-image: linear-gradient(#2D3F4B, #18252D);
+}
+/*----------------------END OF NEWS-----------------------*/
