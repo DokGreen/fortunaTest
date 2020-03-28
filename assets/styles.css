@@ -242,11 +242,49 @@ header h1 {
 }
 
 #about p {
-    flex-basis: 55%;
+    flex-basis: 58%;
     color: rgba(0,0,0,0.5);
 }
 
 .line {
-    border-bottom: solid 1vw #FAAD11;
+    padding-bottom: 0.5vw;
+    border-bottom: solid 0.5vw #FAAD11;
 }
 /*----------------------END OF ARTICLES-----------------------*/
+/*----------------------FOOTER-----------------------*/
+footer {
+    height: 30vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #16232B;
+}
+
+.foot1 img {
+}
+
+.foot2 {
+    height: 80%;
+    width: 50%;
+    margin-top: 2vw;
+    text-align: left;
+    color: rgba(255,255,255,0.8);
+}
+
+th {
+    padding: 0 2.5vw 1.2vw;
+    font-size: 0.9vw;
+    font-weight: normal;
+}
+
+td {
+    min-width: 10vw;
+    font-size: 0.9vw;
+    padding: 0.3vw 0 0.3vw 2.5vw;
+}
+
+.footLine {
+    padding-bottom: 0.8vh;
+    border-bottom: solid 0.3vh rgba(255,255,255,0.8);
+}
+/*----------------------END OF FOOTER-----------------------*/
