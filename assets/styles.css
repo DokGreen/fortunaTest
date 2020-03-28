@@ -42,7 +42,7 @@ nav img {
 /*----------------------END OF NAV-----------------------*/
 /*----------------------HEADER-----------------------*/
 header {
-    height: 50vh;
+    height: 45vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -71,7 +71,7 @@ header h1 {
 #options {
     position: relative;
     height: 60vh;
-    margin-bottom: 2vw;
+    margin-bottom: 4vh;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -120,14 +120,19 @@ header h1 {
     margin: 0 auto;
     padding: 3vh 1vw 4vh 1vw;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    overflow: hidden;
     background-color: #EEF3F9;
 }
+
+.artHeader {
+    font-size: 1.3vw;
+}
+
 /*----------------------LARGE ARTICLES-----------------------*/
 #largeArt {
     height: 100%;
     width: 58%;
-    margin-left: 1vw;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -136,13 +141,18 @@ header h1 {
 .lSubBox {
     height: 42vh;
     display: flex;
+    padding-right: 3vw;
     justify-content: space-between;
     align-items: center;
     background-color: #fff;
     overflow: hidden;
-    border-radius: 0.5vw;
+    border-radius: 0.2vw;
 }
 
+.lSubBox img {
+    height: 50vh;
+    width: 13vw;
+}
 
 .lSubBox div {
     height: 40vh;
@@ -168,6 +178,7 @@ header h1 {
 }
 
 .bigTxt {
+    font-size: 1.2vw;
     line-height: 1.8vw;
     color: rgba(0,0,0,0.5);
 }
@@ -175,15 +186,15 @@ header h1 {
 /*----------------------SMALL ARTICLES-----------------------*/
 .smallArt {
     height: 100vh;
-    width: 31%;
-    margin-right: 8vw;
+    width: 32%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
+
 .listing h3 {
-    padding-bottom: 1.6vw;
+    padding-bottom: 1.4vw;
 }
 
 .gt {
@@ -193,6 +204,7 @@ header h1 {
 #sSubBox {
     height: 35vh;
     padding: 2vw;
+    font-size: 1.2vw;
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -203,7 +215,7 @@ header h1 {
 
 .star {
     height: 40vh;
-    margin-bottom: 5vw;
+    margin-bottom: 6vw;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -217,9 +229,14 @@ header h1 {
     margin-bottom: 1.5vw;
 }
 
+.starImg {
+    height: 10vh;
+}
+
 .starTxt {
     width: 71%;
     margin-right: 2vw;
+    font-size: 1.2vw;
     float: right;
     color: rgba(0,0,0,0.5);
 }
@@ -233,12 +250,12 @@ header h1 {
 }
 
 #aboutHead {
+    font-size: 2vw;
     font-weight: normal;
 }
 
 #about {
     display: flex;
-    margin-top: 1vw;
 }
 
 #about h1 {
@@ -251,6 +268,7 @@ header h1 {
 
 #about p {
     flex-basis: 58%;
+    font-size: 1.2vw;
     color: rgba(0,0,0,0.5);
 }
 
@@ -276,14 +294,21 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-size: 1.2vw;
     color: rgba(255,255,255,0.8);
 }
 
+.foot1 img {
+    width: 20vw;
+    margin-bottom: 2vh;
+}
+
+
+/*----------------------- LEFT THIS IN TO SHOW MY FIRST SOLUTION
 #imgFix {
     position: relative;
     height: 22vh;
     width: 20vw;
-    overflow: hidden;
 }
 
 #subImgFix {
@@ -297,12 +322,13 @@ footer {
 #subImgFix2 {
     position: absolute;
     left: 3vw;
-    top: 6vw;
+    top: 12vh;
     height: 8vh;
     width: 14.5vw;
     background: url('./logo-white.svg') no-repeat right;
     background-size: cover;
 }
+*/
 /*----------------------END OF FOOT 1-----------------------*/
 /*----------------------FOOT 2-----------------------*/
 .foot2 {
