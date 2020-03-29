@@ -9,13 +9,12 @@ const topRight = document.querySelector('.topRight');
 const midRight = document.querySelector('.midRight');
 const botRight = document.querySelector('.botRight');
 
-const op = document.querySelector('.op');
-const over = document.querySelector('.over');
-
 const supBtn = document.querySelector('#supBtn');
+const supBox = document.querySelector('#supBox');
 
 //CREATED VARIABLES
 let slide = true;
+let screen = window.innerWidth;
 
 //HAMBURGER NAVIGATION ANIMATION
 ham.addEventListener('click', ()=> {
@@ -46,21 +45,18 @@ ham.addEventListener('click', ()=> {
         botRight.classList.toggle('botRightActive');
     }
 })
-//OPTION HOVER ANIMATION
-over.addEventListener('mouseover', () => {
-    over.addEventListener('mousemove', (e) => {
-        console.log('movement detected');
-        //console.log(e.offsetX, e.offsetY);
-        //console.log('X'+e.x, 'Y'+e.y)
-        let X = e.offsetX;
-        let Y = e.offsetY;
 
-        console.log(X, Y);
-
-        op.style.transform = "skew("+e.offsetX+","+e.offsetY+")";
-    })
-})
-
-supBtn.addEventListener('mouseup', () => {
-    supBtn.innerhtml = "Thank you!";
+supBtn.addEventListener('click', () => {
+    if(supBox.value == "" && screen > 480) {
+        alert('Please enter and Email Adress.');
+    } else if(screen <= 480 && slide) {
+        slide = !slide;
+        supBtn.value = "Sign Up";
+        supBox.style.top = "0.5vh";
+    } else {
+        slide = !slide;
+        supBox.style.top = "10vh";
+        supBox.value = "";
+        supBtn.value = "Thank you!";
+    }
 })
