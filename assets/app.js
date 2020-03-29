@@ -15,6 +15,7 @@ const supBox = document.querySelector('#supBox');
 //CREATED VARIABLES
 let slide = true;
 let screen = window.innerWidth;
+let mail = true;
 
 //HAMBURGER NAVIGATION ANIMATION
 ham.addEventListener('click', ()=> {
@@ -49,12 +50,13 @@ ham.addEventListener('click', ()=> {
 supBtn.addEventListener('click', () => {
     if(supBox.value == "" && screen > 480) {
         alert('Please enter and Email Adress.');
-    } else if(screen <= 480 && slide) {
-        slide = !slide;
+        supBtn.value = "Sign Up";
+    } else if(screen <= 480 && mail) {
+        mail = !mail;
         supBtn.value = "Sign Up";
         supBox.style.top = "0.5vh";
     } else {
-        slide = !slide;
+        mail = !mail;
         supBox.style.top = "10vh";
         supBox.value = "";
         supBtn.value = "Thank you!";
