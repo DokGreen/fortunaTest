@@ -39,6 +39,10 @@ nav img {
     font-size: 1vw;
 }
 
+.mobNav {
+    display: none;
+}
+
 .ham {
     display: none;
 }
@@ -365,6 +369,17 @@ td {
     padding: 0.3vw 0 0.3vw 2.5vw;
 }
 
+.footSearch {
+    padding: 1.5vw;
+    border: none;
+    color: #FAAD11;
+    background-color: #2F414D;
+}
+
+.footSearch::placeholder {
+    color: rgba(255,255,255,0.8);
+}
+
 .footLine {
     padding-bottom: 0.8vh;
     border-bottom: solid 0.3vh rgba(255,255,255,0.8);
@@ -450,6 +465,13 @@ td {
         justify-content: center;
         align-items: center;
         overflow: hidden;
+        z-index: 101;
+      }
+
+      .activeHam {
+          position: fixed;
+          top: -45vh;
+          left: 86vw;
       }
       
       .ham div {
@@ -467,35 +489,125 @@ td {
         margin: 2.5vw 0;
       }
       
-      .midLeft, .midRight, .topLeft, .botLeft, .topRight, .botRight, .hamNav {/*change speed as desired*/
+      .midLeft, .midRight, .topLeft,
+      .botLeft, .topRight, .botRight,
+      .hamNav {/*change speed as desired*/
         transition: all 300ms ease-in-out;
       }
       
-      .ham:hover .midLeft {
-        opacity: 0;
-        transform: translateX(-1vw)
+      .midLeftActive {
+        transform: translateX(-7vw);
       }
-      .ham:hover .midRight {
-        opacity: 0;
-        transform: translateX(1vw)
+      .midRightActive {
+        transform: translateX(7vw);
       }
       
-      .ham:hover .topLeft {
-        transform: Rotate(40deg) translate(1.3vw, 0.6vw);
+      .topLeftActive {
+        transform: Rotate(40deg) translate(1.6vw, 0.6vw);
       }
       
-      .ham:hover .botLeft {
-        transform: Rotate(-40deg) translate(1.3vw, -0.6vw);
+      .botLeftActive {
+        transform: Rotate(-40deg) translate(1.6vw, -0.6vw);
       }
       
-      .ham:hover .topRight {
-        transform: Rotate(-40deg) translate(-1.3vw, 0.6vw);
+      .topRightActive {
+        transform: Rotate(-40deg) translate(-1.6vw, 0.6vw);
       }
       
-      .ham:hover .botRight {
-        transform: Rotate(40deg) translate(-1.3vw, -0.6vw);
+      .botRightActive {
+        transform: Rotate(40deg) translate(-1.6vw, -0.6vw);
       }
       /*----------------------END OF HAMBURGER-----------------------*/
+      /*----------------------SLIDE NAV-----------------------*/
+      .mobNav {
+          position: fixed;
+          height: 100vh;
+          width: 100vw;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          z-index: 100;
+          background-image: linear-gradient(#2F414D, #16232B);
+          transform: translateX(-100vw);
+          transition: all ease-in-out 700ms;
+      }
+      #mobWrap {
+        margin-bottom: 30vh;
+      }
+
+      .mobNav ul {
+        margin-bottom: 15vw;
+        list-style: none;
+        font-size: 6vw;
+        font-weight: 700;
+        text-align: center;
+        color: transparent;
+      }
+
+      .mobItem {
+          display: block;
+          padding: 3vw;
+          z-index: 102;
+          transition: all ease-in-out 300ms;
+      }
+      /*---------------------SLIDE OPTIONS-----------*/
+      .mobItem::after {
+        content: '';
+        position: absolute;
+        color: #fff;
+        transition: all ease-in-out 300ms;
+  }
+
+      .mobItem:nth-child(1)::after {
+          content: 'HOME';
+          left: 40.5vw;
+    }
+
+    .mobItem:nth-child(2)::after{
+        content: 'ABOUT';
+        left: 40vw;
+    }
+
+    .mobItem:nth-child(3)::after{
+        content: 'SERVICES';
+        left: 34vw;
+    }
+
+    .mobItem:nth-child(4)::after{
+        content: 'BLOG';
+        left: 42vw;
+    }
+
+    /*---------------------END OF SLIDE OPTIONS-----------*/
+
+      .mobItem:hover {
+          color: #fff;
+          transition: all ease-in-out 300ms;
+      }
+
+      .mobItem:hover::after {
+          color: #FAAD11;
+          text-shadow: 1vw 0.2vh #000;
+          transition: all ease-in-out 300ms;
+      }
+
+      .mobSearch {
+          height: 6vh;
+          width: 70vw;
+          padding: 2vw;
+          font-size: 6vw;
+          color: #FAAD11;
+          font-weight: 700;
+          border: none;
+          background-color: #2F414D;
+      }
+
+      .mobSearch::placeholder {
+          color: #fff;
+      }
+      /*----------------------END OF SLIDE NAV-----------------------*/
+      /*----------------------END OF NAV-----------------------*/
       /*----------------------HEADER-----------------------*/
     header {
         height: 30vh;
@@ -581,7 +693,7 @@ td {
 
     .lSubBox div {
         position: absolute;
-        height: 23vh;
+        height: 27vh;
         width: 34vw;
         align-self: flex-end;
         display: flex;
@@ -597,12 +709,16 @@ td {
     }
 
     .mobHead {
-        margin-top: 5.5vh;
+        margin-top: 7vh;
+    }
+
+    .bigTxt {
+        display: none;
     }
 
     .bigBtn {
         position: absolute;
-        top: 16vh;
+        top: 20vh;
         width: 100%;
         margin-top: 2vh;
         padding: 1.5vw;
