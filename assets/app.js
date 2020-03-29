@@ -1,5 +1,6 @@
 //VARIABLES FROM SITE
 const slideNav = document.querySelector('.mobNav');
+
 const ham = document.querySelector('.ham');
 const topLeft = document.querySelector('.topLeft');
 const midLeft = document.querySelector('.midLeft');
@@ -8,9 +9,15 @@ const topRight = document.querySelector('.topRight');
 const midRight = document.querySelector('.midRight');
 const botRight = document.querySelector('.botRight');
 
+const op = document.querySelector('.op');
+const over = document.querySelector('.over');
+
+const supBtn = document.querySelector('#supBtn');
+
 //CREATED VARIABLES
 let slide = true;
 
+//HAMBURGER NAVIGATION ANIMATION
 ham.addEventListener('click', ()=> {
     if(slide) {
         slide = !slide;
@@ -38,4 +45,22 @@ ham.addEventListener('click', ()=> {
         botLeft.classList.toggle('botLeftActive');
         botRight.classList.toggle('botRightActive');
     }
+})
+//OPTION HOVER ANIMATION
+over.addEventListener('mouseover', () => {
+    over.addEventListener('mousemove', (e) => {
+        console.log('movement detected');
+        //console.log(e.offsetX, e.offsetY);
+        //console.log('X'+e.x, 'Y'+e.y)
+        let X = e.offsetX;
+        let Y = e.offsetY;
+
+        console.log(X, Y);
+
+        op.style.transform = "skew("+e.offsetX+","+e.offsetY+")";
+    })
+})
+
+supBtn.addEventListener('mouseup', () => {
+    supBtn.innerhtml = "Thank you!";
 })

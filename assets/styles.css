@@ -6,6 +6,11 @@
     font-family: Helvetica, Arial, sans-serif;
 }
 
+button:active {
+    transform: translateY(0.3vh);
+
+}
+
 .yell {
     color: #FAB11D;
 }
@@ -37,6 +42,11 @@ nav img {
 .listItem {
     display: inline-block;
     font-size: 1vw;
+    transition: all ease-in-out 300ms;
+}
+
+.listItem:hover {
+    color: #FAAD11;
 }
 
 .mobNav {
@@ -87,6 +97,7 @@ header h1 {
 }
 
 .op {
+    position: relative;
     width: 18.5vw;
     list-style: none;
     text-align: center;
@@ -95,17 +106,39 @@ header h1 {
     font-size: 3.8vw;
     line-height: 110vh;
     text-shadow: 0.1vw 0.1vw 0.2vw #000;
-    border-radius: 0.2vw;
+    border-radius: 0.4vw;
     background-position: center;
     background-size: cover;
+    overflow: hidden;
+    transition: all ease-in-out 300ms;
+}
+
+.op p {
+    position: relative;
+    z-index: 101;
+}
+
+.over {
+    position: absolute;
+    height: 98%;
+    width: 90%;
+    margin-top: 1.5%;
+    margin-left: 5%;
+    border: solid 0.1vw #FAAD11;
+    border-radius: 1vw;;
+    background-color: transparent;
+    z-index: 100;
+    transition: all ease-in-out 300ms;
 }
 
 #rArrow {
     width: 8vw;
+    transition: all ease-in-out 300ms;
 }
 
 #arr {
     display: none;
+    transition: all ease-in-out 300ms;
 }
 
 .op:nth-child(1) {
@@ -258,7 +291,7 @@ header h1 {
 }
 /*----------------------END OF SMALL ARTICLES-----------------------*/
 /*----------------------END OF ARTICLES-----------------------------*/
-/*----------------------OPTIONS-----------------------------*/
+/*----------------------ABOUT-----------------------------*/
 #aboutSect {
     height: 55vh;
     padding: 2vw;
@@ -294,7 +327,7 @@ header h1 {
     padding-bottom: 0.5vw;
     border-bottom: solid 0.5vw #FAAD11;
 }
-/*----------------------END OF OPTIONS-----------------------*/
+/*----------------------END OF ABOUT-----------------------*/
 /*----------------------FOOTER-----------------------*/
 footer {
     height: 35vh;
@@ -626,6 +659,12 @@ td {
         line-height: 15vh;
         text-shadow: 0.1vw 0.1vw 0.2vw #000;
         border-radius: 1vw;
+    }
+
+    .over {
+        margin-top: 1%;
+        margin-left: 4.5%;
+        border: solid 0.2vw #FAAD11;
     }
 
     #rArrow {
